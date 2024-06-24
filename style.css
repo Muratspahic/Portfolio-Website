@@ -268,3 +268,173 @@ nav ul li a:hover::after {
 .btn:hover {
   background: #ff004f;
 }
+
+/* CONTACT */
+
+.contact-left {
+  flex-basis: 36%;
+}
+
+.contact-right{
+  flex-basis: 60%;
+}
+
+.contact-left p {
+  margin-top: 30px;
+}
+
+.contact-left p ion-icon {
+  color: #ff004f;
+  margin-right: 20px;
+  font-size: 26px;
+}
+
+.social-icons {
+  margin-top: 30px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 16px;
+  color: #ababab;
+  display: inline-block;
+  transition: transform 0.5s;
+}
+
+.social-icons a:hover {
+  color: #ff004f;
+  transform: translateY(-6px);
+}
+
+.btn.btn2 {
+  display: inline-block;
+  background: #ff004f;
+}
+
+.contact-right form {
+  width: 100%;
+}
+
+form input, form textarea {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: #494444;
+  padding: 16px;
+  margin: 16px 0;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 8px;
+}
+
+form .btn2 {
+  padding: 14px 60px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.copyright{
+  width: 100%;
+  text-align: center;
+  padding: 26px 0;
+  background: #262626;
+  font-weight: 300;
+  margin-top: 20px;
+}
+
+.icon {
+  display: none;
+}
+
+
+/* MOBILE VERSION */
+
+@media only screen and (max-width: 600px){
+  .header-text {
+    margin-top: 100%;
+    font-size: 16px;
+  }
+  .header-text h1{
+    font-size: 30px;
+  }
+
+  .icon {
+    display: block;
+    font-size: 26px;
+    cursor: pointer;
+  }
+
+  nav ul {
+    background: #ff004f;
+    position: absolute;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    font-size: 26px;
+    z-index: 2;
+    transition: right 0.5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 26px;
+  }
+
+  nav ul .icon {
+    position: absolute;
+    top: 26px;
+    left: 26px;
+    cursor: pointer;
+  }
+
+  .sub title {
+    font-size: 40px;
+  }
+
+  .about-col-1, .about-col-2 {
+    flex-basis: 100%;
+  }
+
+  .about-col-1 {
+    margin-bottom: 30px;
+  }
+
+  .about-col-2 {
+    font-size: 16px;
+  }
+
+  .tab-links {
+    font-size: 16px;
+    margin-right: 20px;
+  }
+
+  .contact-left, .contact-right {
+    flex-basis: 100%;
+  }
+
+  .copyright {
+    font-size: 14px;
+  }
+
+  .services-list {
+    display: block;
+    margin-top: 30px;
+  }
+
+  .services-list div {
+      padding: 20px;
+      margin-bottom: 30px;
+  }
+
+  .services-list h2 {
+      font-size: 24px;
+  }
+
+  .services-list div a {
+      margin-top: 15px;
+  }
+}

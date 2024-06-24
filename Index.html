@@ -12,13 +12,19 @@
         <div class="container">
             <nav>
                 <img src="./Images/logo.png" class="logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
+                <ul id="sidemenu">
+                    <li><a href="#">Početna</a></li>
+                    <li><a href="#">O nama</a></li>
+                    <li><a href="#">Usluge</a></li>
                     <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                    <span class="icon" onclick="toggleMenu()">
+                        <ion-icon name="close-outline"></ion-icon>
+                    </span>
                 </ul>
+                <span class="icon" onclick="toggleMenu()">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </span>
             </nav>
             <div class="header-text">
                 <p>UI/UX Designer</p>
@@ -135,22 +141,28 @@
             <div class="row">
                 <div class="contact-left">
                     <h1 class="sub-title">Contact Me</h1>
-                    <p>contact@emir.com</p>
-                    <p>12345678</p>
+                    <p><ion-icon name="mail-outline"></ion-icon>contact@emir.com</p>
+                    <p><ion-icon name="call-outline"></ion-icon>123-456-789</p>
                     <div class="social-icons">
                         <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
                         <a href=""><ion-icon name="logo-twitter"></ion-icon></a>
                         <a href=""><ion-icon name="logo-linkedin"></ion-icon></a>
                         <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
                     </div>
+                    <a href="./Images/my-cv.pdf" download="" class="btn btn2">Download CV</a>
                 </div>
                 <div class="contact-right">
                     <form>
                         <input type="text" name="Name" placeholder="Your Name" required>
                         <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
                     </form>
                 </div>
             </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Emir 2024 Portfolio Page</p>
         </div>
     </div>
 
