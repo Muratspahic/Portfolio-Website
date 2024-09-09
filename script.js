@@ -23,7 +23,7 @@ function toggleMenu() {
     } else {
         sidemenu.style.right = "-200px";
     }
-}
+};
 
 document.addEventListener("DOMContentLoaded", function() {
     var navLinks = document.querySelectorAll('nav ul#sidemenu li a');
@@ -39,10 +39,19 @@ document.addEventListener("DOMContentLoaded", function() {
                     behavior: 'smooth'
                 });
 
-                // Zatvaranje bočnog menija ako je otvoren (opciono)
                 var sidemenu = document.getElementById('sidemenu');
                 sidemenu.classList.remove('open');
             }
+        });
+    });
+});
+
+document.querySelectorAll('#sidemenu a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
         });
     });
 });
