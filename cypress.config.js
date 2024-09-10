@@ -13,3 +13,10 @@ module.exports = {
     viewportHeight: 1080,
   },
 };
+
+// module.exports = {
+//   e2e: {
+//     viewportWidth: 320,
+//     viewportHeight: 667,
+//   },
+// };
