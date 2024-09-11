@@ -139,7 +139,7 @@
     <div id="contact">
         <div class="container">
             <div class="row">
-                <div class="contact-left">
+                <div data-testid="contact-info" class="contact-left">
                     <h1 class="sub-title">Contact Me</h1>
                     <p><ion-icon name="mail-outline"></ion-icon>contact@emir.com</p>
                     <p><ion-icon name="call-outline"></ion-icon>123-456-789</p>
@@ -149,19 +149,19 @@
                         <a href=""><ion-icon name="logo-linkedin"></ion-icon></a>
                         <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
                     </div>
-                    <a href="./Images/my-cv.pdf" download="" class="btn btn2">Download CV</a>
+                    <a href="./Images/my-cv.pdf" download="" data-testid="btn-info" class="btn btn2">Download CV</a>
                 </div>
-                <div class="contact-right">
+                <div data-testid="login-info" class="contact-right">
                     <form>
                         <input type="text" name="Name" placeholder="Your Name" required>
                         <input type="email" name="email" placeholder="Your Email" required>
                         <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
+                        <button type="submit" data-testid="btn-submit" class="btn btn2">Submit</button>
                     </form>
                 </div>
             </div>
         </div>
-        <div class="copyright">
+        <div data-testid="copyright-info" class="copyright">
             <p>Copyright © Emir 2024 Portfolio Page</p>
         </div>
     </div>
