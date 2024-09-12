@@ -25,7 +25,6 @@ describe('Visit My Portfolio', () => {
     });
   });
 
-
   it('should contain the about section', () => {
     cy.get('#about').within(() => {
       cy.get('.about-col-1').within(() => {
@@ -43,12 +42,15 @@ describe('Visit My Portfolio', () => {
   });
 
   it('should correctly display content when tabs are clicked', () => {
-    const testTab = (index, expectedContentId) => {
-      cy.get('[data-testid="links"] .tab-links').eq(index).click();
+      const testTab = (index, expectedContentId) => {
+        cy.get('[data-testid="links"] .tab-links').eq(index).click();
 
-      cy.get(expectedContentId).should('be.visible');
-      cy.get('.tab-contents').not(expectedContentId).should('not.be.visible');
-    };
+        cy.get(expectedContentId).should('be.visible');
+
+        cy.get('.tab-contents').not(expectedContentId).each($el => {
+            cy.wrap($el).should('not.be.visible');
+        });
+      };
 
     testTab(0, '#skills');
     testTab(1, '#experience');
@@ -78,7 +80,6 @@ describe('Visit My Portfolio', () => {
       });
     });
   });
-
 
   it('should display the portfolio section with the correct ID', () => {
     cy.get('#portfolio').should('be.visible');

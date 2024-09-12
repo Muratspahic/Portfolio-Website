@@ -14,34 +14,29 @@ function opentab(tabname){
 };
 
 function toggleMenu() {
-    var sidemenu = document.getElementById("sidemenu");
+    const sidemenu = document.getElementById('sidemenu');
+    const rightValue = window.getComputedStyle(sidemenu).getPropertyValue('right');
 
-    var rightValue = window.getComputedStyle(sidemenu).getPropertyValue("right");
-
-    if (rightValue === "-200px") {
-        sidemenu.style.right = "0";
-    } else {
-        sidemenu.style.right = "-200px";
-    }
+    sidemenu.style.right = rightValue === '-200px' ? '0' : '-200px';
 };
 
-document.addEventListener("DOMContentLoaded", function() {
-    var navLinks = document.querySelectorAll('nav ul#sidemenu li a');
+document.addEventListener('DOMContentLoaded', () => {
+    const sidemenu = document.getElementById('sidemenu');
+    const navLinks = sidemenu.querySelectorAll('ul li a');
 
-    navLinks.forEach(function(navLink) {
-        navLink.addEventListener('click', function(event) {
-            event.preventDefault();
-            var targetId = this.getAttribute('href').substring(1);
-            var targetElement = document.getElementById(targetId);
+    if (navLinks.length > 0) {
+        navLinks.forEach(navLink => {
+            navLink.addEventListener('click', (event) => {
+                event.preventDefault();
+                const targetId = navLink.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
 
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth'
-                });
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
 
-                var sidemenu = document.getElementById('sidemenu');
-                sidemenu.classList.remove('open');
-            }
+                    sidemenu.classList.remove('open');
+                }
+            });
         });
-    });
+    }
 });
